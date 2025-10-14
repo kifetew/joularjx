@@ -73,7 +73,7 @@ public class CpuFactory {
             File raplFolder = new File(raplFolderPath);
             if (raplFolder.exists()) {
                 // Rapl is supported
-                return new RaplLinux();
+                return new RaplLinuxMultisocket();
             } else {
                 // If no RAPL, then no support
                 logger.log(Level.SEVERE, "Platform not supported. Exiting...");
